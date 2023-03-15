@@ -1,0 +1,46 @@
+.error-message {
+    width: 100%;
+    height: calc(100vh);
+    display: grid;
+
+    place-content: center;
+}
+
+.error-text {
+    font-size: 30px;
+    animation-name: textError;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+// .error-text:hover {
+//     animation-name: textError;
+//     animation-duration: 12s;
+
+
+// }
+
+@keyframes textError {
+    0% {
+        color: rgb(27, 16, 29);
+        opacity: 1;
+    }
+
+    15% {
+        color: rgb(133, 36, 137);
+        opacity: 1.5;
+    }
+
+    25% {
+        color: rgb(223, 52, 223);
+        opacity: 2;
+    }
+
+    50% {
+        color: rgb(90, 12, 112);
+        transform: translateY(-44px);
+        font-size: 45px;
+        text-decoration: underline;
+        transition: text-decoration cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
