@@ -6,7 +6,6 @@ const NotFound = () => {
         <div className="error-message">
             <h2 className="error-text" >Not Found, Error 404.</h2>
         </div>
-
     );
 }
 
