@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/EditAccount.scss';
+import '../styles/MyAccount.scss';
 
-const EditAccount = () => {
+const MyAccount = () => {
     return (
-        <div className="login">
-            <div className="form-container">
+        <div className="MyAccount">
+            <div className="MyAccount-container">
                 <h1 className="title">My account</h1>
                 <form action="/" className="form">
                     <div>
@@ -22,4 +22,4 @@ const EditAccount = () => {
     );
 }
 
-export default EditAccount;
+export default MyAccount;

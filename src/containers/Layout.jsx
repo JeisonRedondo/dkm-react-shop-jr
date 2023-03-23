@@ -1,8 +1,10 @@
 import React, { Children } from 'react';
+import Header from '../components/Header.jsx';
 
 const Layout = ({ children }) => {
     return (
-        <div className="">
+        <div className="Layout">
+            <Header />
             {children}
         </div>
     );
