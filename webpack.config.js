@@ -13,9 +13,18 @@ module.exports = {
         publicPath: '/',
 
     },
-    mode:'development',
+    mode: 'development',
     resolve: {
-        extensions: ['.js','.jsx'],
+        extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+
+        }
     },
     module: {
         rules: [
@@ -30,7 +39,7 @@ module.exports = {
                 test: /\.html$/,
                 use: [
                     {
-                        loader:'html-loader'
+                        loader: 'html-loader'
                     }
                 ]
             },
@@ -40,6 +49,17 @@ module.exports = {
                     "style-loader",
                     "css-loader",
                     "sass-loader",
+                ],
+            },
+            {
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "images/[hash]-[name].[ext]",
+                        },
+                    },
                 ],
             }
         ]
