@@ -17,6 +17,8 @@
   "author": "JeisonRedondo <jeida16@yahoo.es>",
   "license": "MIT",
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "axios": "^0.21.1",
     "babel-loader": "^9.1.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
