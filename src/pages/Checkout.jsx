@@ -1,5 +1,6 @@
 import React from 'react';
-import OrderItem from '../components/OrderItem.jsx';
+import OrderItem from '@components/OrderItem.jsx';
+import flechaIcon from '@icons/flechita.svg';
 
 const Checkout = () => {
     return (
@@ -13,7 +14,7 @@ const Checkout = () => {
                             <span>6 articles</span>
                         </p>
                         <p>$560.00</p>
-                        <img src="./icons/flechita.svg" alt="arrow"/>
+                        <img src={flechaIcon} alt="arrow"/>
                     </div>
                 </div>
                 <OrderItem />

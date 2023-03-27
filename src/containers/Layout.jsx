@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import Header from '../components/Header.jsx';
+import Header from '@components/Header.jsx';
 import '@styles/Layout.scss';
 
 const Layout = ({ children }) => {
