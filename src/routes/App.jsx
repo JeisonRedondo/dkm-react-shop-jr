@@ -1,21 +1,25 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import '../styles/global.css';
+import '@styles/global.css';
+import AppContext from '@context/AppContext';
+import useInitialState from '@hooks/useInitialState';
 
 import Layout from '../containers/Layout';
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
-import PasswordRecovery from '../pages/PasswordRecovery';
-import SendEmail from '../pages/SendEmail';
-import NewPassword from '../pages/NewPassword';
-import MyAccount from '../pages/MyAccount';
-import CreateAccount from '../pages/CreateAccount';
-import Checkout from '../pages/Checkout';
-import Orders from '../pages/Orders';
-import Login from '../pages/Login';
+import Home from '@pages/Home';
+import NotFound from '@pages/NotFound';
+import PasswordRecovery from '@pages/PasswordRecovery';
+import SendEmail from '@pages/SendEmail';
+import NewPassword from '@pages/NewPassword';
+import MyAccount from '@pages/MyAccount';
+import CreateAccount from '@pages/CreateAccount';
+import Checkout from '@pages/Checkout';
+import Orders from '@pages/Orders';
+import Login from '@pages/Login';
 
 const App = () => {
+    const initialState = useInitialState();
     return (
+        <AppContext.Provider value={initialState}>
         <BrowserRouter>
             <Layout>
                 <Switch>
@@ -32,6 +36,7 @@ const App = () => {
                 </Switch>
             </Layout>
         </BrowserRouter>
+        </AppContext.Provider>
     );
 }
 
