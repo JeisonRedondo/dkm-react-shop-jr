@@ -11,6 +11,7 @@ const useInitialState = () => {
         setState({
             ...state,
             cart: [...state.cart, payload]
+            
         });
     };
     return {
